@@ -10,7 +10,7 @@
 in {
   imports = [
     ../users
-    # home-manager
+    inputs.home-manager.nixosModules.home-manager
   ];
 
   nix.settings = {
@@ -26,7 +26,7 @@ in {
   time.timeZone = mkDefault "America/New_York";
   i18n.defaultLocale = mkDefault "en_US.UTF-8";
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; mkDefault [
     git
     neovim
     curl

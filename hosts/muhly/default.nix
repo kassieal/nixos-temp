@@ -22,7 +22,7 @@
       {
         name = "kassie";
 	privileged = true;
-	# config = "${inputs.self.outPath}/users/kassie";
+	config = "${inputs.self.outPath}/users/kassie";
       }
     ];
   };

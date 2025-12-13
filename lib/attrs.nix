@@ -8,7 +8,7 @@ in rec {
     any (attr: pred attr.name attr.value) (attrs-to-list attrs);
 
   count-attrs = pred: attrs:
-    count (attr: pred attr.name attr:value) (attrs-to-list attrs);
+    count (attr: pred attr.name attr.value) (attrs-to-list attrs);
 
   combine-attrs = builtins.foldl' (acc: x: acc // x) {};
 }
