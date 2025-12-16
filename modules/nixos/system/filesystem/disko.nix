@@ -24,7 +24,7 @@ in {
     inherit (import cfg.config-file) disko;
 
     fileSystems = {
-      # "${config.modules.system.filesystem.impermanence.persist-dir}".neededForBoot = true;
+      "${config.modules.system.filesystem.impermanence.persist-dir}".neededForBoot = true;
       "/var/log".neededForBoot = true;
       "/home".neededForBoot = true;
     };
