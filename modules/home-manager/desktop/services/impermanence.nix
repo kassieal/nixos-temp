@@ -13,7 +13,7 @@ in {
   imports = [ inputs.impermanence.homeManagerModules.impermanence ];
   
   options.modules.impermanence = {
-    enable = mk-enable false;
+    enable = mk-enable true;
   };
   
   config = mkIf cfg.enable {
